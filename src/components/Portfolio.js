@@ -7,10 +7,10 @@ export const Portfolio = () => {
         <div className="container-fluid">
 
             {/* // head part */}
-            <div className="container-fluid profile gradient-custom" style={{height: 765}}>
+            <div className="container-fluid profile gradient-custom" style={{height: 'auto', paddingTop: 120, paddingBottom:120}}>
                 
-                <div className="container-fluid" style={{paddingLeft: '34%'}}>
-                    <div className="top">
+                <div className="row">
+                    <div className="col top">
                         <div className="card front-face">
                             <img src="./images/profile.png"/>
                         </div>
@@ -40,7 +40,7 @@ export const Portfolio = () => {
             </div>  
 
             {/* // about me     */}
-            <div className="container-fluid about" style={{height: 765, background: 'lavender'}}>
+            <div className="container-fluid about" style={{height: 'auto', background: 'lavender', paddingTop: 120, paddingBottom:120}}>
                 <div className="row" style={{alignItems: 'center'}}>
                     <div className="col">
                         <img src="./images/about.png" alt="about me" />
@@ -60,7 +60,7 @@ export const Portfolio = () => {
             </div>
 
             {/* Education and work experience */}
-            <div className="container-fluid px-4" style={{height: 765, background: 'wheat'}}>
+            <div className="container-fluid px-4" style={{height: 'auto', background: 'wheat', paddingTop: 10, paddingBottom:110}}>
                 <div className="row text-center" style={{display: 'flex'}}>
 
                     <div className="col-md-6">
@@ -142,7 +142,7 @@ export const Portfolio = () => {
             </div>  
 
             {/* projects */}
-            <div className="container-fluid" style={{height: 765, background: 'lavender'}}>
+            <div className="container-fluid" style={{height: 'auto', background: 'lavender', paddingTop:15, paddingBottom:120}}>
                 <div className="row text-center">
                     <h1 style={{paddingTop: 15}}>Projects</h1>
                 </div>
@@ -207,7 +207,7 @@ export const Portfolio = () => {
             </div>
 
             {/* skills */}
-            <div className="container-fluid" style={{height: 765, background: 'wheat'}}>
+            <div className="container-fluid" style={{height: 'auto', background: 'wheat', paddingTop: 15, paddingBottom:70}}>
                 <div className="row text-center" style={{paddingTop: 20}}>
                     <h1>Technical Skills</h1>
                 </div>

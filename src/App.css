@@ -1,38 +1,209 @@
-.App {
-  text-align: center;
+
+
+
+/* profile rotate css */
+
+.top {
+    height: 540px;
+    width: 500px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.top .card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    background: #fff;
+    border-radius: 10px;
+    transform: translateY(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.top:hover>.front-face {
+    transform: rotateY(-180deg);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.top .card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.top .back-face {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    transform: rotateY(180deg);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.top:hover>.back-face {
+    transform: rotateY(0deg);
+}
+
+.top .back-face img {
+    height: 150px;
+    width: 150px;
+    padding: 5px;
+    border-radius: 50%;
+    background: linear-gradient(375deg, #1cc7d0, #2ede98);
+}
+
+.top .back-face .info {
+    text-align: center;
+}
+
+
+
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+hr{
+    border-top: 1px solid black;
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f6d365;
+background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
+}
+
+.about{
+    display: flex;
+}
+
+.education{
+    padding-top: 30px;
+}
+
+.work{
+    padding-top: 30px;
+}
+
+.text{
+    color: black;
+}
+.projectbody{
+    padding-top: 15px;
+    width: fit-content;
+    padding-left: 33px;
+}
+.project1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: inherit;
+}
+.technique{
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    /* box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06); */
+}
+
+
+/* 
+flip the card */
+
+
+.wrapper {
+    height: 400px;
+    width: 320px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.wrapper .card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    background: #fff;
+    border-radius: 10px;
+    transform: translateY(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.wrapper:hover>.front-face {
+    transform: rotateY(-180deg);
+}
+
+.wrapper .card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.wrapper .back-face {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    transform: rotateY(180deg);
+}
+
+.wrapper:hover>.back-face {
+    transform: rotateY(0deg);
+}
+
+.wrapper .back-face img {
+    height: 150px;
+    width: 150px;
+    padding: 5px;
+    border-radius: 50%;
+    background: linear-gradient(375deg, #1cc7d0, #2ede98);
+}
+
+.wrapper .back-face .info {
+    text-align: center;
+}
+
+.back-face .info .title {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.back-face ul {
+    display: flex;
+}
+
+.back-face ul a {
+    display: block;
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    text-align: center;
+    margin: 0 5px;
+    line-height: 38px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background: linear-gradient(375deg, #1cc7d0, #2ede98);
+    transition: all 0.5s ease;
+}
+
+.back-face ul a:hover {
+    color: #1cc7d0;
+    border-color: #1cc7d0;
+    background: linear-gradient(375deg, transparent, transparent);
 }
